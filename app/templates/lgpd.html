@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="full-height">
+    <div class="form-container">
+        <h1 class="text-center">Termos e Serviços</h1>
+        <div class="form-group">
+            <p>Aqui você pode adicionar o texto resumido sobre os termos e serviços. Este texto deve cobrir os pontos principais de como os dados dos usuários serão tratados conforme as diretrizes da LGPD.</p>
+            <p>1. Coleta de Dados: Informações coletadas e como serão utilizadas.</p>
+            <p>2. Uso de Dados: Propósitos para os quais os dados serão utilizados.</p>
+            <p>3. Compartilhamento de Dados: Com quem os dados podem ser compartilhados.</p>
+            <p>4. Direitos dos Usuários: Direitos dos usuários sobre seus dados pessoais.</p>
+            <p>5. Segurança: Medidas de segurança adotadas para proteger os dados.</p>
+            <p>6. Contato: Informações de contato para questões relacionadas à privacidade.</p>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-fullwidth" onclick="window.location.href='{{ url_for('register') }}'">Voltar ao Cadastro</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

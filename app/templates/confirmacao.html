@@ -1,0 +1,15 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="">
+    <div class="form-container">
+        <h1 class="text-center">Confirmação de Agendamento</h1>
+        <p>Seu agendamento foi realizado com sucesso!</p>
+        <p><strong>Data:</strong> {{ data }}</p>
+        <p><strong>Hora:</strong> {{ hora }}</p>
+        <form action="{{ url_for('dashboard') }}" method="get">
+            <button type="submit" class="btn btn-primary btn-fullwidth">Voltar ao Dashboard</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

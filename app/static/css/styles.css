@@ -1,0 +1,259 @@
+body {
+  background-color: #000000; /* Fundo preto */
+  color: #ffffff; /* Cor do texto branca */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em; /* Aumentar o tamanho da fonte em 10% */
+}
+
+header {
+  background: url('/static/images/header.png') no-repeat center center;
+  background-size: cover;
+  height: 200px; /* Altura do header */
+  width: 100%;
+  position: relative;
+}
+
+header .logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  height: auto;
+}
+
+.full-height {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura da tela inteira */
+}
+
+.navbar {
+  background-color: #1a1a1a;
+  width: 100%;
+  padding: 20px 20px; /* Aumentar a altura do navbar */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px; /* Adicionar padding aos botões */
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s; /* Adicionar transição para os botões */
+}
+
+.navbar a:hover {
+  background-color: #32cd32; /* Fundo verde claro ao passar o mouse */
+  border-color: #32cd32; /* Borda verde claro ao passar o mouse */
+  color: #000000; /* Texto preto ao passar o mouse */
+}
+
+.form-container {
+  background-color: #1a1a1a; /* Fundo da caixa de login */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px; /* Largura máxima da caixa de login */
+  margin: auto;
+  box-sizing: border-box; /* Garantir que padding e borda sejam incluídos na largura total */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgb(236, 235, 235);
+  color: #505050;
+  box-sizing: border-box; /* Garantir que padding e borda sejam incluídos na largura total */
+  font-size: 1.1em;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 48%; /* Ocupa 48% da largura do container */
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em; /* Aumentar o tamanho da fonte em 10% */
+}
+
+.btn-primary {
+  background-color: #2612bb; /* Cor dourada */
+  color: #fff; /* Cor do texto branca */
+}
+
+.btn-primary:hover {
+  background-color: #20109c; /* Dourado mais escuro ao passar o mouse */
+}
+
+.btn-secondary {
+  background-color: #32cd32; /* Verde claro */
+  color: #fff; /* Cor do texto branca */
+}
+
+.btn-secondary:hover {
+  background-color: #228b22; /* Verde mais escuro ao passar o mouse */
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 1em; /* Aumentar o tamanho da fonte em 10% */
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.alert-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-link {
+  color: #32cd32 !important;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  color: #228b22 !important;
+}
+
+/* Novo estilo para o botão "Voltar ao Cadastro" */
+.btn-fullwidth {
+  width: 100%; /* Ocupa 100% da largura do container */
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 1.1em; /* Aumentar o tamanho da fonte em 10% */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px; /* Espaço entre o navbar e os cards */
+}
+
+.card {
+  background-color: #e9ffdf; /* Um cinza mais claro que o fundo */
+  color: #716565;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding: 20px;
+  width: 260px; /* Ajuste de largura do card */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.card-time {
+  margin: 10px 0;
+}
+
+.card button {
+  align-self: flex-end;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgb(236, 235, 235);
+  color: #505050;
+  box-sizing: border-box; /* Garantir que padding e borda sejam incluídos na largura total */
+  font-size: 1.1em;
+  font-family: 'Arial', sans-serif; /* Garantir que todos os campos usem a mesma fonte */
+}
+.cards-container,
+.form-container {
+  margin-top: 20px; /* Espaço entre o navbar e o container */
+}
+
+.mt {
+  margin-top: 16px;
+}
+
+.form-container {
+  background-color: #1a1a1a; /* Fundo da caixa de login */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px; /* Largura máxima da caixa de login */
+  margin: 20px auto; /* Espaço entre o navbar e o container */
+  box-sizing: border-box; /* Garantir que padding e borda sejam incluídos na largura total */
+}
+
+.text-header {
+  font-size: 24px;
+}
+
+.date-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.date-title {
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.appointment-card {
+  background-color: #e9ffdf; /* Um cinza mais claro que o fundo */
+  color: #716565;
+  padding: 10px;
+  margin-bottom: 10px; /* Espaço entre os cards */
+  border-radius: 8px; /* Bordas arredondadas para um visual suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para dar um efeito elevado */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

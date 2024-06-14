@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>{% block title %}Barbearia{% endblock %}</title>
+</head>
+<body>
+<!-- dashboard_base.html -->
+<nav class="navbar">
+    <a href="{{ url_for('dashboard') }}">Visualizar Agendamentos</a>
+    {% if not current_user.is_admin %}
+        <a href="{{ url_for('agendar') }}">Novo Agendamento</a>
+    {% endif %}
+    <a href="{{ url_for('logout') }}">Logout</a>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>
+
+
+

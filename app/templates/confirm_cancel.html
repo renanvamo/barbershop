@@ -1,0 +1,21 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="">  
+    <div class="form-container">
+        <h1 class="text-center">Confirmar Cancelamento</h1>
+        <p>Você tem certeza que deseja cancelar este agendamento?</p>
+        <p><strong>Serviço:</strong> {{ appointment.service.nome }} - R$ {{ appointment.service.preco }}</p>
+        <p><strong>Data:</strong> {{ appointment.data.strftime('%d/%m/%Y') }}</p>
+        <p><strong>Hora:</strong> {{ appointment.hora.strftime('%H:%M') }}</p>
+        <div class="btn-group">
+            <form method="POST" action="{{ url_for('confirm_cancel', appointment_id=appointment.id) }}" style="width: 50%; padding-right: 6px;">
+                <button type="submit" class="btn btn-primary btn-fullwidth">Confirmar Cancelamento</button>
+            </form>
+            <form method="GET" action="{{ url_for('dashboard') }}" style="width: 50%; padding-left: 6px;">
+                <button type="submit" class="btn btn-secondary btn-fullwidth">Voltar aos Agendamentos</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

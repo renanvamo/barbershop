@@ -1,0 +1,43 @@
+{% extends "dashboard_base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h1 class="text-center">Agendar Serviço</h1>
+    <form method="POST" action="{{ url_for('agendar') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.servico.label }}<br>
+            {{ form.servico(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.data.label }}<br>
+            {{ form.data(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.hora.label }}<br>
+            {{ form.hora(class="form-control") }}
+        </div>
+        <div class="form-group btn-group">
+            {{ form.submit(class="btn btn-primary btn-fullwidth mt") }}
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('data').addEventListener('change', function() {
+        var date = this.value;
+        fetch('/get_available_times/' + date)
+            .then(response => response.json())
+            .then(data => {
+                var horaSelect = document.querySelector('select[name=hora]');
+                horaSelect.innerHTML = '';
+                data.times.forEach(function(time) {
+                    var option = document.createElement('option');
+                    option.value = time;
+                    option.textContent = time;
+                    horaSelect.appendChild(option);
+                });
+            });
+    });
+    </script>
+{% endblock %}

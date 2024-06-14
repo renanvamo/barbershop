@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="full-height">
+    <div class="form-container">
+        <h1 class="text-center">Registrar</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method="POST" action="{{ url_for('register') }}">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.nome.label }}<br>
+                {{ form.nome(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label }}<br>
+                {{ form.email(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.telefone.label }}<br>
+                {{ form.telefone(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.senha.label }}<br>
+                {{ form.senha(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.confirm_senha.label }}<br>
+                {{ form.confirm_senha(class="form-control") }}
+            </div>
+            <div class="form-group form-check">
+                {{ form.agree_terms(class="form-check-input") }}
+                {{ form.agree_terms.label(class="form-check-label") }}
+                <a href="/lgpd" target="_blank" class="btn btn-link">Termos e Serviços</a>
+            </div>
+            <div class="form-group btn-group">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="button" class="btn btn-secondary" onclick="window.location.href='{{ url_for('login') }}'">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
