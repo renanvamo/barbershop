@@ -30,56 +30,28 @@ Este projeto é um sistema de agendamento online desenvolvido para barbearias, p
 ### Instalação
 
 1. Clone o repositório:
-git clone [URL do repositório]
+git clone https://github.com/renanvamo/barbershop.git
 cd [nome-do-repositorio]
-
-csharp
-Copiar código
 
 2. Crie e ative um ambiente virtual (opcional):
 python -m virtualenv venv
 source venv/bin/activate # No Windows use venv\Scripts\activate
 
-csharp
-Copiar código
-
 3. Instale as dependências:
 pip install -r requirements.txt
-
-csharp
-Copiar código
 
 4. Configure as variáveis de ambiente:
 export FLASK_APP=run.py
 export FLASK_ENV=development # Ajuste conforme o necessário para produção
 
-markdown
-Copiar código
-
 5. Inicialize o banco de dados:
 flask db upgrade
-
-css
-Copiar código
 
 6. Execute a aplicação:
 flask run
 
-markdown
-Copiar código
-
 Acesse a aplicação via `http://localhost:5000` no seu navegador.
 
-## Licença
+## Autor
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para detalhes.
-
-## Autores
-
-- **Seu Nome** - *Trabalho Inicial* - [SeuPerfil](https://github.com/SeuPerfil)
-
-## Agradecimentos
-
-- Reconhecimento a qualquer pessoa cujo código foi usado
-- Inspiração
-- etc
+- Renan Moraes - *Trabalho Inicial* - https://github.com/renanvamo
